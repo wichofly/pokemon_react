@@ -1,0 +1,11 @@
+.property__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.property {
+  border: 1px solid black;
+  margin: 1rem;
+  padding: 1rem;
+  color: sienna;
+}
