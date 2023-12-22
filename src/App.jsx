@@ -1,5 +1,5 @@
 import './App.css';
-import ShoppingList from './components/ShoppingList';
+import ShoppingList from './components/shopping/ShoppingList';
 // import RandomPokemon from './components/RandomPokemon';
 // import DoubleDice from './components/DoubleDice';
 // import Heading from './components/Heading';
