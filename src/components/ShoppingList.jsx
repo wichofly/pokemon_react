@@ -4,12 +4,13 @@ const ShoppingList = ({ items }) => {
   return (
     <ul>
       {items.map((item) => (
-        <ShoppingListItem
-          key={item.id}
-          product={item.product}
-          quantity={item.quantity}
-          completed={item.completed}
-        />
+        // <ShoppingListItem
+        //   key={item.id}
+        //   product={item.product}
+        //   quantity={item.quantity}
+        //   completed={item.completed}
+        // />
+        <ShoppingListItem key={item.id} {...item} />
       ))}
     </ul>
   );
