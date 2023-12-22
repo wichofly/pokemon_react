@@ -18,6 +18,9 @@ const ShoppingList = ({ items }) => {
 
 export default ShoppingList;
 
+// If we want to pass the props to the component, we can use the spread operator
+// {...item}
+
 // const data = [
 //   { product: 'milk', quantity: 11, completed: true },
 //   { product: 'coffee', quantity: 7, completed: false },
