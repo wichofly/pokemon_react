@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Pokemon 
+--------------------------------- */
+/* .pokemon__container {
+  max-width: 300px;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.pokemon__container h1 {
+  color: aqua;
+}
+
+.pokemon__container img {
+  max-width: 300px;
+}
+
+.btn {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(7, 53, 53);
+  background-color: azure;
+  border: 1px solid #c8971a;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+} */
+
+/* 
+---------------------------------------- */
+
+/* Double Die
+-------------------------------------------- */
+/* .doubleDice {
+  max-width: 300px;
+  margin: 4rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid;
+  border-radius: 5px;
+} */
+
+/* ----------------------------------------- */
