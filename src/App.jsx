@@ -1,4 +1,6 @@
 import './App.css';
+import Counter from './components/counters/Counter';
+import Toggler from './components/counters/Toggler';
 import PropertyList from './components/properties/PropertyList';
 // import ShoppingList from './components/shopping/ShoppingList';
 // import RandomPokemon from './components/RandomPokemon';
@@ -38,6 +40,8 @@ function App() {
       {/* <ShoppingList items={data} /> */}
 
       <PropertyList properties={properties} />
+      <Counter />
+      <Toggler />
     </>
   );
 }
