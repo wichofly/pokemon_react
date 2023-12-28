@@ -3,7 +3,7 @@ import ShoppingListItem from './ShoppingListItem';
 const ShoppingList = ({ items }) => {
   return (
     <ul>
-      {items.map((item) => (
+      {items.map((item) => ( 
         // <ShoppingListItem
         //   key={item.id}
         //   product={item.product}

@@ -7,7 +7,7 @@ import './App.css';
 // import DoubleDice from './components/DoubleDice';
 // import Heading from './components/Heading';
 // import { ColorList } from './components/ColorList';
-import ColorboxGrid from './components/exercise/ColorboxGrid';
+import ColorboxGrid from './components/5-exercise/ColorboxGrid';
 
 // const data = [
 //   { id: 1, product: 'milk', quantity: 11, completed: true },
