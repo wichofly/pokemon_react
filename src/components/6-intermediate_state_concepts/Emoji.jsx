@@ -8,10 +8,22 @@ const Emoji = () => {
     setEmojis((oldEmojis) => [...oldEmojis, { id: uuid(), emoji: '🤠' }]);
   };
 
+  const removeOne = (id) => {
+    // const deleteOne = emojis.filter((image) => image.id !== id);
+    // setEmojis(deleteOne);
+
+    // setEmojis(emojis.filter((image) => image.id !== id));
+    setEmojis((prevEmoji) => prevEmoji.filter((image) => image.id !== id));
+  };
+
   return (
     <div>
       {emojis.map((image) => (
-        <span key={image.id} style={{ fontSize: '3rem' }}>
+        <span
+          key={image.id}
+          style={{ fontSize: '3rem', cursor: 'pointer' }}
+          onClick={() => removeOne(image.id)}
+        >
           {image.emoji}
         </span>
       ))}
