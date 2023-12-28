@@ -1,8 +1,17 @@
+import { useState } from 'react';
+import './Colorbox.css';
 
 const ColorBox = () => {
+  const [color, setColor] = useState('brown');
+  
   return (
-    <div>ColorBox</div>
-  )
-}
+    <div
+      className="colorBox"
+      style={{
+        backgroundColor: color,
+      }}
+    ></div>
+  );
+};
 
-export default ColorBox
+export default ColorBox;
