@@ -1,5 +1,23 @@
 import { useState } from 'react';
 
+const flex = {
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  margin: '10px',
+};
+
+const btn_decrease = {
+  marginRight: '5px',
+  padding: '5px 10px',
+  border: '1px solid #F6ECA9',
+  borderRadius: '4px',
+  cursor: 'pointer',
+  fontSize: '18px',
+  backgroundColor: '#BF3131',
+  color: '#EAD196',
+};
+
 const btn_plus = {
   padding: '5px 10px',
   border: '1px solid #F6ECA9',
@@ -10,17 +28,6 @@ const btn_plus = {
   color: '#596FB7',
 };
 
-const btn_decrease = {
-  marginLeft: '10px',
-  padding: '5px 10px',
-  border: '1px solid #F6ECA9',
-  borderRadius: '4px',
-  cursor: 'pointer',
-  fontSize: '18px',
-  backgroundColor: '#BF3131',
-  color: '#EAD196',
-};
-
 const Counter = () => {
   const [counter, setCounter] = useState(0);
 
@@ -29,17 +36,19 @@ const Counter = () => {
   };
 
   return (
-    <div>
-      <p>Count is: {counter}</p>
-      <button onClick={increase} style={btn_plus}>
-        +
-      </button>
-      <button
-        onClick={() => setCounter(counter > 0 ? counter - 1 : 0)}
-        style={btn_decrease}
-      >
-        -
-      </button>
+    <div style={flex}>
+      <p style={{ marginRight: '10px' }}>Count is: {counter}</p>
+      <div style={{ display: 'flex' }}>
+        <button
+          onClick={() => setCounter(counter > 0 ? counter - 1 : 0)}
+          style={btn_decrease}
+        >
+          -
+        </button>
+        <button onClick={increase} style={btn_plus}>
+          +
+        </button>
+      </div>
     </div>
   );
 };
