@@ -1,0 +1,12 @@
+.colorBox {
+  width: 20%;
+  height: 20%;
+}
+
+.colorBoxGrid {
+  width: 600px;
+  height: 600px;
+  border: 1px solid peru;
+  display: flex;
+  flex-wrap: wrap;
+}

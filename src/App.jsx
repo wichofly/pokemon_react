@@ -1,12 +1,13 @@
 import './App.css';
-import Counter from './components/counters/Counter';
-import Toggler from './components/counters/Toggler';
-import PropertyList from './components/properties/PropertyList';
+// import Counter from './components/counters/Counter';
+// import Toggler from './components/counters/Toggler';
+// import PropertyList from './components/properties/PropertyList';
 // import ShoppingList from './components/shopping/ShoppingList';
 // import RandomPokemon from './components/RandomPokemon';
 // import DoubleDice from './components/DoubleDice';
 // import Heading from './components/Heading';
 // import { ColorList } from './components/ColorList';
+import ColorboxGrid from './components/exercise/ColorboxGrid';
 
 // const data = [
 //   { id: 1, product: 'milk', quantity: 11, completed: true },
@@ -24,6 +25,25 @@ const properties = [
   { id: 6, name: 'Santa Ana', rating: 4.1, price: 69 },
 ];
 
+const colors = [
+  '#FFE7C1',
+  '#DC84F3',
+  '#86B6F6',
+  '#F2AFEF',
+  '#A1EEBD',
+  '#FF9800',
+  '#65B741',
+  '#C69774',
+  '#776B5D',
+  '#EC8F5E',
+  '#A9A9A9',
+  '#B15EFF',
+  '#D6D46D',
+  '#A459D1',
+  '#191825',
+  '#00FFD1',
+];
+
 function App() {
   return (
     <>
@@ -39,9 +59,13 @@ function App() {
 
       {/* <ShoppingList items={data} /> */}
 
-      <PropertyList properties={properties} />
-      <Counter />
-      <Toggler />
+      {/* <PropertyList properties={properties} /> */}
+
+      {/* <Counter /> */}
+
+      {/* <Toggler /> */}
+
+      <ColorboxGrid colors={colors} />
     </>
   );
 }
