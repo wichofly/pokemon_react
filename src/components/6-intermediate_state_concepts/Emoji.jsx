@@ -4,7 +4,7 @@ const Emoji = () => {
   const [emojis, setEmojis] = useState(['😇']);
 
   const addEmoji = () => {
-    setEmojis([...emojis, '🥳']);
+    setEmojis((oldEmojis) => [...oldEmojis, '🥳']);
   };
 
   return (
