@@ -1,4 +1,5 @@
 import './App.css';
+
 // import Counter from './components/counters/Counter';
 // import Toggler from './components/counters/Toggler';
 // import PropertyList from './components/properties/PropertyList';
@@ -7,7 +8,8 @@ import './App.css';
 // import DoubleDice from './components/DoubleDice';
 // import Heading from './components/Heading';
 // import { ColorList } from './components/ColorList';
-import ColorboxGrid from './components/5-exercise/ColorboxGrid';
+// import ColorboxGrid from './components/5-exercise/ColorboxGrid';
+import Emoji from './components/6-intermediate_state_concepts/Emoji';
 
 // const data = [
 //   { id: 1, product: 'milk', quantity: 11, completed: true },
@@ -16,33 +18,33 @@ import ColorboxGrid from './components/5-exercise/ColorboxGrid';
 //   { id: 4, product: 'sugar', quantity: 5, completed: false },
 // ];
 
-const properties = [
-  { id: 1, name: 'San Salvador', rating: 4.5, price: 98 },
-  { id: 2, name: 'Acajutla', rating: 3.9, price: 102 },
-  { id: 3, name: 'Gold Juayua', rating: 4.2, price: 99 },
-  { id: 4, name: 'Beautiful view', rating: 4.8, price: 55 },
-  { id: 5, name: 'El Paisnal', rating: 3.8, price: 29 },
-  { id: 6, name: 'Santa Ana', rating: 4.1, price: 69 },
-];
+// const properties = [
+//   { id: 1, name: 'San Salvador', rating: 4.5, price: 98 },
+//   { id: 2, name: 'Acajutla', rating: 3.9, price: 102 },
+//   { id: 3, name: 'Gold Juayua', rating: 4.2, price: 99 },
+//   { id: 4, name: 'Beautiful view', rating: 4.8, price: 55 },
+//   { id: 5, name: 'El Paisnal', rating: 3.8, price: 29 },
+//   { id: 6, name: 'Santa Ana', rating: 4.1, price: 69 },
+// ];
 
-const colors = [
-  '#FFE7C1',
-  '#DC84F3',
-  '#86B6F6',
-  '#F2AFEF',
-  '#A1EEBD',
-  '#FF9800',
-  '#65B741',
-  '#C69774',
-  '#776B5D',
-  '#EC8F5E',
-  '#A9A9A9',
-  '#B15EFF',
-  '#D6D46D',
-  '#A459D1',
-  '#191825',
-  '#00FFD1',
-];
+// const colors = [
+//   '#FFE7C1',
+//   '#DC84F3',
+//   '#86B6F6',
+//   '#F2AFEF',
+//   '#A1EEBD',
+//   '#FF9800',
+//   '#65B741',
+//   '#C69774',
+//   '#776B5D',
+//   '#EC8F5E',
+//   '#A9A9A9',
+//   '#B15EFF',
+//   '#D6D46D',
+//   '#A459D1',
+//   '#191825',
+//   '#00FFD1',
+// ];
 
 function App() {
   return (
@@ -65,7 +67,9 @@ function App() {
 
       {/* <Toggler /> */}
 
-      <ColorboxGrid colors={colors} />
+      {/* <ColorboxGrid colors={colors} /> */}
+
+      <Emoji />
     </>
   );
 }
