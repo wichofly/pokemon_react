@@ -1,12 +1,13 @@
 import './App.css';
-import Counter from './components/counters/Counter';
-import Toggler from './components/counters/Toggler';
-import PropertyList from './components/properties/PropertyList';
+// import Counter from './components/counters/Counter';
+// import Toggler from './components/counters/Toggler';
+// import PropertyList from './components/properties/PropertyList';
 // import ShoppingList from './components/shopping/ShoppingList';
 // import RandomPokemon from './components/RandomPokemon';
 // import DoubleDice from './components/DoubleDice';
 // import Heading from './components/Heading';
 // import { ColorList } from './components/ColorList';
+import ColorBox from './components/exercise/ColorBox';
 
 // const data = [
 //   { id: 1, product: 'milk', quantity: 11, completed: true },
@@ -39,9 +40,13 @@ function App() {
 
       {/* <ShoppingList items={data} /> */}
 
-      <PropertyList properties={properties} />
-      <Counter />
-      <Toggler />
+      {/* <PropertyList properties={properties} /> */}
+
+      {/* <Counter /> */}
+
+      {/* <Toggler /> */}
+
+      <ColorBox />
     </>
   );
 }
