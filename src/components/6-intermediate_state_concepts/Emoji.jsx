@@ -37,6 +37,20 @@ const Emoji = () => {
     setEmojis((prevEmoji) => prevEmoji.filter((image) => image.id !== id));
   };
 
+  // const allHeartsMade = () => {
+  //   setEmojis((prevEmojis) => {
+  //     return prevEmojis.map((image) => {
+  //       return { ...image, emoji: '❤️️' };
+  //     });
+  //   });
+  // };
+
+  const allHeartsMade = () => {
+    setEmojis((prevEmojis) =>
+      prevEmojis.map((image) => ({ ...image, emoji: '❤️️' }))
+    );
+  };
+
   return (
     <div>
       {emojis.map((image) => (
@@ -49,6 +63,9 @@ const Emoji = () => {
         </span>
       ))}
       <button onClick={addEmoji}>Add Emoji</button>
+      <button onClick={allHeartsMade} style={{ marginLeft: '5px' }}>
+        Make them all hearts
+      </button>
     </div>
   );
 };
