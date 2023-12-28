@@ -1,14 +1,35 @@
 import { useState } from 'react';
 import { v4 as uuid } from 'uuid';
 
+const randomEmoji = () => {
+  const choices = [
+    '😴',
+    '🤮',
+    '🤑',
+    '🥳',
+    '🐼',
+    '🐻',
+    '🦁',
+    '🤩',
+    '😇',
+    '🤠',
+    '😁',
+    '🤗',
+  ];
+  return choices[Math.floor(Math.random() * choices.length)];
+};
+
 const Emoji = () => {
-  const [emojis, setEmojis] = useState([{ id: uuid(), emoji: '😇' }]);
+  const [emojis, setEmojis] = useState([{ id: uuid(), emoji: randomEmoji() }]);
 
   const addEmoji = () => {
-    setEmojis((oldEmojis) => [...oldEmojis, { id: uuid(), emoji: '🤠' }]);
+    setEmojis((oldEmojis) => [
+      ...oldEmojis,
+      { id: uuid(), emoji: randomEmoji() },
+    ]);
   };
 
-  const removeOne = (id) => {
+  const removeEmoji = (id) => {
     // const deleteOne = emojis.filter((image) => image.id !== id);
     // setEmojis(deleteOne);
 
@@ -22,7 +43,7 @@ const Emoji = () => {
         <span
           key={image.id}
           style={{ fontSize: '3rem', cursor: 'pointer' }}
-          onClick={() => removeOne(image.id)}
+          onClick={() => removeEmoji(image.id)}
         >
           {image.emoji}
         </span>
