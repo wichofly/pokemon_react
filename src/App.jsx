@@ -1,5 +1,4 @@
 import './App.css';
-import SignupForm from './components/8-react-form/SignupForm';
 
 // import Counter from './components/counters/Counter';
 // import Toggler from './components/counters/Toggler';
@@ -12,7 +11,9 @@ import SignupForm from './components/8-react-form/SignupForm';
 // import ColorboxGrid from './components/5-exercise/ColorboxGrid';
 // import Emoji from './components/6-intermediate_state_concepts/Emoji';
 // import LuckyN from './components/7-luckyNumbers/LuckyN';
-import UserNameForm from './components/8-react-form/UserNameForm';
+// import UserNameForm from './components/8-react-form/UserNameForm';
+// import SignupForm from './components/8-react-form/SignupForm';
+import ShoppingListForm from './components/8-react-form/ShoppingListForm';
 
 // const data = [
 //   { id: 1, product: 'milk', quantity: 11, completed: true },
@@ -77,8 +78,10 @@ function App() {
       {/* <LuckyN />
       <LuckyN numDice={3} goal={11} title="Get" /> */}
 
-      <UserNameForm />
-      <SignupForm />
+      {/* <UserNameForm />
+      <SignupForm /> */}
+
+      <ShoppingListForm />
     </>
   );
 }
