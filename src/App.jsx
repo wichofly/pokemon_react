@@ -1,4 +1,5 @@
 import './App.css';
+import SignupForm from './components/8-react-form/SignupForm';
 
 // import Counter from './components/counters/Counter';
 // import Toggler from './components/counters/Toggler';
@@ -77,6 +78,7 @@ function App() {
       <LuckyN numDice={3} goal={11} title="Get" /> */}
 
       <UserNameForm />
+      <SignupForm />
     </>
   );
 }
