@@ -24,7 +24,7 @@ const Emoji = () => {
 
   const addEmoji = () => {
     setEmojis((oldEmojis) => [
-      ...oldEmojis,
+      ...oldEmojis, // Takes all the old emojis and adds them to the new array.
       { id: uuid(), emoji: randomEmoji() },
     ]);
   };
@@ -39,15 +39,15 @@ const Emoji = () => {
 
   // const allHeartsMade = () => {
   //   setEmojis((prevEmojis) => {
-  //     return prevEmojis.map((image) => {
-  //       return { ...image, emoji: '❤️️' };
+  //     return prevEmojis.map((heartImage) => {
+  //       return { ...heartImage, emoji: '❤️️' };
   //     });
   //   });
   // };
 
   const allHeartsMade = () => {
     setEmojis((prevEmojis) =>
-      prevEmojis.map((image) => ({ ...image, emoji: '❤️️' }))
+      prevEmojis.map((heartImage) => ({ ...heartImage, emoji: '❤️️' }))
     );
   };
 
