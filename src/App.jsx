@@ -13,7 +13,7 @@ import './App.css';
 // import LuckyN from './components/7-luckyNumbers/LuckyN';
 // import UserNameForm from './components/8-react-form/UserNameForm';
 // import SignupForm from './components/8-react-form/SignupForm';
-import ShoppingListForm from './components/8-react-form/ShoppingListForm';
+import ShoppingList from './components/8-react-form/ShoppingList';
 
 // const data = [
 //   { id: 1, product: 'milk', quantity: 11, completed: true },
@@ -81,7 +81,7 @@ function App() {
       {/* <UserNameForm />
       <SignupForm /> */}
 
-      <ShoppingListForm />
+      <ShoppingList />
     </>
   );
 }

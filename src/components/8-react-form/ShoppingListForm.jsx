@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-function ShoppingListForm() {
+function ShoppingListForm({ addItem }) {
   const [formData, setFormData] = useState({ product: '', quantity: 0 });
 
   const handleChange = (evt) => {
@@ -13,14 +13,20 @@ function ShoppingListForm() {
     }));
   };
 
+  const handleSubmit = (evt) => {
+    evt.preventDefault()
+
+    addItem(formData)
+  }
+
   return (
-    <form>
-      <h1 style={{ marginBottom: '15px' }}>
+    <form onSubmit={handleSubmit}>
+      <h2 style={{ marginBottom: '15px' }}>
         📃Product is: {formData.product} and
-      </h1>
-      <h1 style={{ marginBottom: '15px' }}>
+      </h2>
+      <h2 style={{ marginBottom: '15px' }}>
         🔢Quantity is: {formData.quantity}
-      </h1>
+      </h2>
 
       <div>
         <div style={{ marginBottom: '5px' }}>
@@ -35,7 +41,7 @@ function ShoppingListForm() {
             style={{ marginLeft: '10px' }}
           />
         </div>
-        <div>
+        <div style={{ marginBottom: '5px' }}>
           <label htmlFor="quantity">Quantity Name</label>
           <input
             type="number"
@@ -47,6 +53,15 @@ function ShoppingListForm() {
             style={{ marginLeft: '10px' }}
           />
         </div>
+        <button
+          style={{
+            display: 'flex',
+            justifyContent: 'center',
+            margin: '15px auto',
+          }}
+        >
+          Add item
+        </button>
       </div>
     </form>
   );
