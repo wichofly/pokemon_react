@@ -10,7 +10,7 @@ import './App.css';
 // import { ColorList } from './components/ColorList';
 // import ColorboxGrid from './components/5-exercise/ColorboxGrid';
 import Emoji from './components/6-intermediate_state_concepts/Emoji';
-import Dice from './components/7-luckyNumbers/Dice';
+import LuckyN from './components/7-luckyNumbers/LuckyN';
 
 // const data = [
 //   { id: 1, product: 'milk', quantity: 11, completed: true },
@@ -72,8 +72,7 @@ function App() {
 
       <Emoji />
 
-      <Dice dice={[3, 5]} />
-      <Dice dice={[3, 5]} color="brown" />
+      <LuckyN />
     </>
   );
 }
