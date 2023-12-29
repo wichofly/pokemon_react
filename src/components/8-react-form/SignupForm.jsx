@@ -11,12 +11,10 @@ const SignupForm = () => {
     const changeField = evt.target.name;
     const newValue = evt.target.value;
 
-    setFormData((currData) => {
-      currData[changeField] = newValue;
-      return { ...currData };
-    });
-
-    // setFormData((prevData) => ({ ...prevData, [changeField]: newValue }));
+    setFormData((prevData) => ({
+      ...prevData,              // Spread operator to copy the previous data
+      [changeField]: newValue,  // Update the value of the specified field
+    }));
   };
 
   const handleSubmit = () => {
