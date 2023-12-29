@@ -1,19 +1,26 @@
 import { useState } from 'react';
 
 const SignupForm = () => {
-  const [firstName, setFirstName] = useState('');
-  const [lastName, setLastName] = useState('');
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    password: '',
+  });
 
-  const updateFirstName = (evt) => {
-    setFirstName(evt.target.value);
-  };
+  const handleChange = (evt) => {
+    const changeField = evt.target.name;
+    const newValue = evt.target.value;
 
-  const updateLastName = (evt) => {
-    setLastName(evt.target.value);
+    setFormData((currData) => {
+      currData[changeField] = newValue;
+      return { ...currData };
+    });
+
+    // setFormData((prevData) => ({ ...prevData, [changeField]: newValue }));
   };
 
   const handleSubmit = () => {
-    console.log(firstName, lastName);
+    console.log(formData);
   };
 
   return (
@@ -21,18 +28,29 @@ const SignupForm = () => {
       <label htmlFor="first-name">First Name</label>
       <input
         type="text"
-        placeholder="username"
-        value={firstName}
-        onChange={updateFirstName}
+        placeholder="first name"
+        value={formData.firstName}
+        onChange={handleChange}
+        name="firstName"
         id="first-name"
       />
       <label htmlFor="last-name">Last Name</label>
       <input
         type="text"
-        placeholder="username"
-        value={lastName}
-        onChange={updateLastName}
+        placeholder="last name"
+        value={formData.lastName}
+        onChange={handleChange}
+        name="lastName"
         id="last-name"
+      />
+      <label htmlFor="last-name">Last Name</label>
+      <input
+        type="password"
+        placeholder="password"
+        value={formData.password}
+        onChange={handleChange}
+        name="password"
+        id="password"
       />
       <button onClick={handleSubmit}>Submit</button>
     </div>
