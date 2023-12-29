@@ -12,25 +12,15 @@ const ColorboxGrid = ({ colors }) => {
   //   boxes.push(<ColorBox color={color} />);
   // }
 
-  // colors.forEach((color) => {
+  // colors.forEach((color, index) => {
   //   if (boxes.length < 25) {
-  //     boxes.push(<ColorBox color={color} />);
+  //     boxes.push(<ColorBox key={index} colors={color} />);
   //   }
   // });
 
   console.log(boxes);
 
-  return (
-    <div className="colorBoxGrid">
-      {boxes}
-
-      {/* <ColorBox colors={colors} />
-      <ColorBox colors={colors} />
-      <ColorBox colors={colors} />
-      <ColorBox colors={colors} />
-      <ColorBox colors={colors} /> */}
-    </div>
-  );
+  return <div className="colorBoxGrid">{boxes}</div>;
 };
 
 export default ColorboxGrid;
