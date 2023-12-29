@@ -1,23 +1,6 @@
 import { useState } from 'react';
 import { v4 as uuid } from 'uuid';
-
-const randomEmoji = () => {
-  const choices = [
-    '😴',
-    '🤮',
-    '🤑',
-    '🥳',
-    '🐼',
-    '🐻',
-    '🦁',
-    '🤩',
-    '😇',
-    '🤠',
-    '😁',
-    '🤗',
-  ];
-  return choices[Math.floor(Math.random() * choices.length)];
-};
+import { randomEmoji } from './data';
 
 const Emoji = () => {
   const [emojis, setEmojis] = useState([{ id: uuid(), emoji: randomEmoji() }]);
