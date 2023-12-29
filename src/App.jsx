@@ -73,7 +73,7 @@ function App() {
       <Emoji />
 
       <LuckyN />
-      <LuckyN numDice={3} goal={11} />
+      <LuckyN numDice={3} goal={11} title="Get" />
     </>
   );
 }

@@ -6,7 +6,7 @@ const getColor = (arr) => {
   return arr[idx];
 };
 
-const ColorBox = ({ colors }) => {
+const ColorBox = ({ colors, index }) => {
   const [color, setColor] = useState(getColor(colors));
 
   const changeColor = () => {
@@ -21,6 +21,7 @@ const ColorBox = ({ colors }) => {
       style={{
         backgroundColor: color,
       }}
+      key={index}
     ></div>
   );
 };

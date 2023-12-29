@@ -3,7 +3,7 @@ import { getRolls, sum } from './utils';
 
 import Dice from './Dice';
 
-const LuckyN = ({ numDice = 2, goal = 7 }) => {
+const LuckyN = ({ numDice = 2, goal = 7, title = 'Dice Game' }) => {
   const [dado, setDado] = useState(getRolls(numDice));
 
   const isWinner = sum(dado) === goal;
@@ -13,7 +13,8 @@ const LuckyN = ({ numDice = 2, goal = 7 }) => {
   return (
     <main className="lucky__component">
       <h1>
-        Hello Lucky{goal} {isWinner && 'You won!'}
+        {title}
+        {goal} {isWinner && 'You won!'}
       </h1>
       <Dice dice={dado} />
       <button onClick={roll}>Re-Roll Dice</button>
