@@ -15,6 +15,7 @@ import './App.css';
 // import SignupForm from './components/8-react-form/SignupForm';
 import ShoppingList from './components/8-react-form/ShoppingList';
 import FormDemo from './components/8-react-form/FormDemo';
+import JokeFetcher from './components/9-effects/JokeFetcher';
 
 // const data = [
 //   { id: 1, product: 'milk', quantity: 11, completed: true },
@@ -82,8 +83,10 @@ function App() {
       {/* <UserNameForm />
       <SignupForm /> */}
 
-      <ShoppingList />
-      <FormDemo />
+      {/* <ShoppingList />
+      <FormDemo /> */}
+
+      <JokeFetcher />
     </>
   );
 }
