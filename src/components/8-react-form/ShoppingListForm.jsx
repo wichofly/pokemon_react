@@ -2,8 +2,21 @@ import { useState } from 'react';
 
 function ShoppingListForm({ addItem }) {
   const [formData, setFormData] = useState({ product: '', quantity: 0 });
+  const [productIsValid, setProductIsValid] = useState(false);
+
+  const validate = (product) => {
+    if (product.length === 0) {
+      setProductIsValid(false);
+    } else {
+      setProductIsValid(true);
+    }
+  };
 
   const handleChange = (evt) => {
+    if (evt.target.name === 'product') {
+      validate(evt.target.value);
+    }
+
     const changeField = evt.target.name;
     const newValue = evt.target.value;
 
@@ -16,8 +29,10 @@ function ShoppingListForm({ addItem }) {
   const handleSubmit = (evt) => {
     evt.preventDefault();
 
-    addItem(formData);
-    setFormData({ product: '', quantity: 0 }); // empty out the form after is submitted.
+    if (productIsValid) {
+      addItem(formData);
+      setFormData({ product: '', quantity: 0 }); // empty out the form after is submitted.
+    }
   };
 
   return (
@@ -30,7 +45,10 @@ function ShoppingListForm({ addItem }) {
       </h2> */}
 
       <div>
-        <div style={{ marginBottom: '5px' }}>
+        <div style={{ marginBottom: '10px' }}>
+          {!productIsValid && (
+            <p style={{ color: '#BF3131' }}>Product can not be empty</p>
+          )}
           <label htmlFor="product">Product Name</label>
           <input
             type="text"
@@ -55,6 +73,7 @@ function ShoppingListForm({ addItem }) {
           />
         </div>
         <button
+          disabled={!productIsValid}
           style={{
             display: 'flex',
             justifyContent: 'center',
