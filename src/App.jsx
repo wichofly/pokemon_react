@@ -9,8 +9,12 @@ import './App.css';
 // import Heading from './components/Heading';
 // import { ColorList } from './components/ColorList';
 // import ColorboxGrid from './components/5-exercise/ColorboxGrid';
-import Emoji from './components/6-intermediate_state_concepts/Emoji';
-import LuckyN from './components/7-luckyNumbers/LuckyN';
+// import Emoji from './components/6-intermediate_state_concepts/Emoji';
+// import LuckyN from './components/7-luckyNumbers/LuckyN';
+// import UserNameForm from './components/8-react-form/UserNameForm';
+// import SignupForm from './components/8-react-form/SignupForm';
+import ShoppingList from './components/8-react-form/ShoppingList';
+import FormDemo from './components/8-react-form/FormDemo';
 
 // const data = [
 //   { id: 1, product: 'milk', quantity: 11, completed: true },
@@ -70,10 +74,16 @@ function App() {
 
       {/* <ColorboxGrid colors={colors} /> */}
 
-      <Emoji />
+      {/* <Emoji /> */}
 
-      <LuckyN />
-      <LuckyN numDice={3} goal={11} title="Get" />
+      {/* <LuckyN />
+      <LuckyN numDice={3} goal={11} title="Get" /> */}
+
+      {/* <UserNameForm />
+      <SignupForm /> */}
+
+      <ShoppingList />
+      <FormDemo />
     </>
   );
 }
