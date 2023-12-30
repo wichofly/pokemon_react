@@ -14,19 +14,20 @@ function ShoppingListForm({ addItem }) {
   };
 
   const handleSubmit = (evt) => {
-    evt.preventDefault()
+    evt.preventDefault();
 
-    addItem(formData)
-  }
+    addItem(formData);
+    setFormData({ product: '', quantity: 0 }); // empty out the form after is submitted.
+  };
 
   return (
     <form onSubmit={handleSubmit}>
-      <h2 style={{ marginBottom: '15px' }}>
+      {/* <h2 style={{ marginBottom: '15px' }}>
         📃Product is: {formData.product} and
       </h2>
       <h2 style={{ marginBottom: '15px' }}>
         🔢Quantity is: {formData.quantity}
-      </h2>
+      </h2> */}
 
       <div>
         <div style={{ marginBottom: '5px' }}>
