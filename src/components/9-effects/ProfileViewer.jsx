@@ -6,39 +6,35 @@ import ProfileSearchForm from './ProfileSearchForm';
 const gitHubUrl = 'https://api.github.com/users';
 
 const ProfileViewer = () => {
-  const [users, setUsers] = useState([]);
+  const [username, setUsername] = useState("wichofly");
+  const [profile, setProfile] = useState({ data: null, isLoading: true });
 
-  useEffect(() => {
-    const fetchData = async () => {
-      const userResult = await axios(`${gitHubUrl}`);
-      setUsers(userResult);
-    };
-    fetchData();
-  }, [users]); // this effect should only run when username changes.
+  useEffect(
+    function fetchUserOnUsernameChange() {
+      async function fetchUser() {
+        const userResult = await axios.get(`${gitHubUrl}/${username}`);
+        setProfile({ data: userResult.data, isLoading: false });
+      }
+      fetchUser();
+    },
+    [username] // this effect should only run when username changes.
+  );
+
+  function search(username) {
+    setProfile({ data: null, isLoading: true });
+    setUsername(username);
+  }
+
+  if (profile.isLoading) return <i>Loading...</i>;
 
   return (
     <div>
-      <ProfileSearchForm />
-      <ul>
-        {users.map((user) => {
-          // console.log(user)
-          const { id, login, avatar_url, html_url } = user;
-          return (
-            <li key={id}>
-              <img src={avatar_url} alt={login} />
-              <div>
-                <h4 style={{ textTransform: 'capitalize', marginBottom: '0' }}>
-                  {login}
-                </h4>
-                <a href={html_url}>Link</a>
-              </div>
-            </li>
-          );
-        })}
-      </ul>
+      <ProfileSearchForm search={search} />
+      <b>{profile.data.name}</b>
+      <img src={profile.data.avatar_url} />
     </div>
   );
-};
+}
 
 export default ProfileViewer;
 
