@@ -13,9 +13,10 @@ import './App.css';
 // import LuckyN from './components/7-luckyNumbers/LuckyN';
 // import UserNameForm from './components/8-react-form/UserNameForm';
 // import SignupForm from './components/8-react-form/SignupForm';
-import ShoppingList from './components/8-react-form/ShoppingList';
-import FormDemo from './components/8-react-form/FormDemo';
-import JokeFetcher from './components/9-effects/JokeFetcher';
+// import ShoppingList from './components/8-react-form/ShoppingList';
+// import FormDemo from './components/8-react-form/FormDemo';
+// import JokeFetcher from './components/9-effects/JokeFetcher';
+import ProfileViewer from './components/9-effects/ProfileViewer';
 
 // const data = [
 //   { id: 1, product: 'milk', quantity: 11, completed: true },
@@ -86,7 +87,9 @@ function App() {
       {/* <ShoppingList />
       <FormDemo /> */}
 
-      <JokeFetcher />
+      {/* <JokeFetcher /> */}
+
+      <ProfileViewer />
     </>
   );
 }
