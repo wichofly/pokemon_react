@@ -16,7 +16,9 @@ import './App.css';
 // import ShoppingList from './components/8-react-form/ShoppingList';
 // import FormDemo from './components/8-react-form/FormDemo';
 // import JokeFetcher from './components/9-effects/JokeFetcher';
-import ProfileViewer from './components/9-effects/ProfileViewer';
+// import ProfileViewer from './components/9-effects/ProfileViewer';
+// import RatingDemo from './components/10-Material-UI/RatingDemo';
+import Todo from './components/10-Material-UI/Todo';
 
 // const data = [
 //   { id: 1, product: 'milk', quantity: 11, completed: true },
@@ -89,7 +91,11 @@ function App() {
 
       {/* <JokeFetcher /> */}
 
-      <ProfileViewer />
+      {/* <ProfileViewer /> */}
+
+      {/* <RatingDemo /> */}
+
+      <Todo />
     </>
   );
 }
