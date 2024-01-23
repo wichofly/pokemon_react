@@ -3,6 +3,7 @@ import { v4 as uuid } from 'uuid';
 
 import List from '@mui/material/List';
 import TodoItem from './TodoItem';
+import TodoForm from './TodoForm';
 
 const initialTodos = [
   { id: uuid(), text: 'Feed the cat', completed: false },
@@ -31,16 +32,43 @@ export default function TodoList() {
       })
     );
 
+  const addTodo = (text) =>
+    setTodos((prevTodos) => [
+      ...prevTodos,
+      { text: text, id: uuid(), completed: false },
+    ]);
+
   return (
-    <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
-      {todos.map((todo) => (
-        <TodoItem
-          key={todo.id}
-          todo={todo}
-          removeTodo={() => removeTodo(todo.id)}
-          toggle={() => toggleTodo(todo.id)}
-        />
-      ))}
-    </List>
+    <>
+      <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
+        {todos.map((todo) => (
+          <TodoItem
+            key={todo.id}
+            todo={todo}
+            removeTodo={() => removeTodo(todo.id)}
+            toggle={() => toggleTodo(todo.id)}
+          />
+        ))}
+        <TodoForm addTodo={addTodo} />
+      </List>
+    </>
   );
 }
+
+/*
+  <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
+      {todos.map((todo) => {
+        // Destructuring assignment syntax.
+        const { id } = todo;
+
+        return (
+          <TodoItem
+            key={id}
+            todo={todo}
+            removeTodo={() => removeTodo(id)}
+            toggle={() => toggleTodo(id)}
+          />
+        );
+      })}
+  </List>
+*/
