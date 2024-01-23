@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import { v4 as uuid } from 'uuid';
-
+import { Box, Typography } from '@mui/material';
 import List from '@mui/material/List';
+
 import TodoItem from './TodoItem';
 import TodoForm from './TodoForm';
 
@@ -49,7 +50,18 @@ export default function TodoList() {
   };
 
   return (
-    <>
+    <Box
+      sx={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        flexDirection: 'column',
+        m: 3,
+      }}
+    >
+      <Typography variant="h2" component="h1" sx={{ flexGrow: 1 }}>
+        To-Do List
+      </Typography>
       <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
         {todos.map((todo) => (
           <TodoItem
@@ -61,7 +73,7 @@ export default function TodoList() {
         ))}
         <TodoForm addTodo={addTodo} />
       </List>
-    </>
+    </Box>
   );
 }
 

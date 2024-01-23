@@ -5,7 +5,6 @@ import ListItem from '@mui/material/ListItem';
 import TextField from '@mui/material/TextField';
 import { cyan } from '@mui/material/colors';
 
-
 import { useState } from 'react';
 
 const TodoForm = ({ addTodo }) => {
@@ -35,7 +34,11 @@ const TodoForm = ({ addTodo }) => {
             endAdornment: (
               <InputAdornment position="end">
                 <IconButton aria-label="create to-do" edge="end" type="submit">
-                  <Create sx={{ color: cyan[300] }} />
+                  <Create
+                    sx={{
+                      color: cyan[300],
+                    }}
+                  />
                 </IconButton>
               </InputAdornment>
             ),
