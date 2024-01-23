@@ -32,11 +32,16 @@ export default function TodoList() {
       })
     );
 
-  const addTodo = (text) =>
-    setTodos((prevTodos) => [
+  const addTodo = (text) => {
+    const capitalizeFirstLetter = (string) => {
+      return string.charAt(0).toUpperCase() + string.slice(1);
+    };
+
+    return setTodos((prevTodos) => [
       ...prevTodos,
-      { text: text, id: uuid(), completed: false },
+      { text: capitalizeFirstLetter(text), id: uuid(), completed: false },
     ]);
+  };
 
   return (
     <>

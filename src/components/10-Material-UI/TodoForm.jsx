@@ -15,7 +15,7 @@ const TodoForm = ({ addTodo }) => {
 
   const handleSubmit = (evt) => {
     evt.preventDefault();
-    
+
     addTodo(text);
     setText('');
   };
@@ -32,7 +32,7 @@ const TodoForm = ({ addTodo }) => {
           InputProps={{
             endAdornment: (
               <InputAdornment position="end">
-                <IconButton aria-label="create to-do" edge="end">
+                <IconButton aria-label="create to-do" edge="end" type="submit">
                   <Create />
                 </IconButton>
               </InputAdornment>
