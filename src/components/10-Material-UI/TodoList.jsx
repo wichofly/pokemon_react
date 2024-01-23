@@ -5,15 +5,6 @@ import List from '@mui/material/List';
 import TodoItem from './TodoItem';
 import TodoForm from './TodoForm';
 
-// const initialTodos = [
-//   { id: uuid(), text: 'Feed the cat', completed: false },
-//   { id: uuid(), text: 'Stretch out ', completed: true },
-//   { id: uuid(), text: 'Call my mother', completed: false },
-//   { id: uuid(), text: 'Read the Bible', completed: true },
-//   { id: uuid(), text: 'Meditate', completed: false },
-// ];
-// console.log(initialTodos)
-
 const getInitialData = () => {
   const data = JSON.parse(localStorage.getItem('todos'));
 
@@ -71,6 +62,17 @@ export default function TodoList() {
 }
 
 /*
+
+const initialTodos = [
+  { id: uuid(), text: 'Feed the cat', completed: false },
+  { id: uuid(), text: 'Stretch out ', completed: true },
+  { id: uuid(), text: 'Call my mother', completed: false },
+  { id: uuid(), text: 'Read the Bible', completed: true },
+  { id: uuid(), text: 'Meditate', completed: false },
+];
+console.log(initialTodos)
+--------------------------------------------------------------------------------------------
+
   <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
       {todos.map((todo) => {
         // Destructuring assignment syntax.
@@ -86,4 +88,5 @@ export default function TodoList() {
         );
       })}
   </List>
+
 */
