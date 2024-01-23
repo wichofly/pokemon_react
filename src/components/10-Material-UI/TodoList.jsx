@@ -38,6 +38,10 @@ export default function TodoList() {
       return string.charAt(0).toUpperCase() + string.slice(1);
     };
 
+    if (text.trim() === '') {
+      return; // Do not add an empty string to the todo list
+    }
+
     return setTodos((prevTodos) => [
       ...prevTodos,
       { text: capitalizeFirstLetter(text), id: uuid(), completed: false },
@@ -88,5 +92,9 @@ console.log(initialTodos)
         );
       })}
   </List>
+  --------------------------------------------------------------------------------------------
+
+  In case UUID() is not using as npm, is used:
+    - id: crypto.randomUUID()
 
 */

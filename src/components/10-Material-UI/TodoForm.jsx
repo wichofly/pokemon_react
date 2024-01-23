@@ -3,6 +3,8 @@ import InputAdornment from '@mui/material/InputAdornment';
 import { Create } from '@mui/icons-material';
 import ListItem from '@mui/material/ListItem';
 import TextField from '@mui/material/TextField';
+import { cyan } from '@mui/material/colors';
+
 
 import { useState } from 'react';
 
@@ -33,7 +35,7 @@ const TodoForm = ({ addTodo }) => {
             endAdornment: (
               <InputAdornment position="end">
                 <IconButton aria-label="create to-do" edge="end" type="submit">
-                  <Create />
+                  <Create sx={{ color: cyan[300] }} />
                 </IconButton>
               </InputAdornment>
             ),

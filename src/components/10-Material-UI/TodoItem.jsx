@@ -4,7 +4,8 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import Checkbox from '@mui/material/Checkbox';
 import IconButton from '@mui/material/IconButton';
-import CommentIcon from '@mui/icons-material/Comment';
+import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
+import { pink } from '@mui/material/colors';
 
 const TodoItem = ({ todo, removeTodo, toggle }) => {
   const labelId = `checkbox-list-label-${todo.id}`;
@@ -13,7 +14,7 @@ const TodoItem = ({ todo, removeTodo, toggle }) => {
     <ListItem
       secondaryAction={
         <IconButton edge="end" aria-label="comments" onClick={removeTodo}>
-          <CommentIcon />
+          <DeleteForeverIcon sx={{ color: pink[400] }}  />
         </IconButton>
       }
       disablePadding
