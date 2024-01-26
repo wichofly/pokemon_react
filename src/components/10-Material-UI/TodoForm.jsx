@@ -50,3 +50,13 @@ const TodoForm = ({ addTodo }) => {
 };
 
 export default TodoForm;
+
+/*
+  - when working with events, particularly form events, the "evt.target.value" property plays a crucial role in accessing and manipulating the data entered by the user. 
+    It allows you to retrieve the current value of the form element that triggered the event. 
+  - When to use "evt.target.value"** 
+    You typically use "evt.target.value" in event handlers, such as "onclick","onchange" or "onsubmit," to capture and process the user's input.
+
+  ° "evt.preventDefault()"
+    Prevent the default form submission behavior
+*/
