@@ -26,7 +26,7 @@ const TodoForm = ({ addTodo }) => {
       <form onSubmit={handleSubmit}>
         <TextField
           id="standard-basic"
-          label="Type"
+          label="Add Item"
           variant="standard"
           onChange={handleChange}
           value={text}
