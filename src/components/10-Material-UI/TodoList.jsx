@@ -16,6 +16,7 @@ const getInitialData = () => {
 export default function TodoList() {
   const [todos, setTodos] = useState(getInitialData);
 
+  // Save into localStorage every single time our todos change
   useEffect(() => {
     localStorage.setItem('todos', JSON.stringify(todos));
   }, [todos]);
@@ -42,7 +43,7 @@ export default function TodoList() {
       item.charAt(0).toUpperCase() + item.slice(1);
 
     if (text.trim() === '') {
-      return; // Do not add an item when there is string to the to-do list
+      return; // Do not add an item when there is not a string to the to-do list
     }
 
     return setTodos((prevTodos) => [
