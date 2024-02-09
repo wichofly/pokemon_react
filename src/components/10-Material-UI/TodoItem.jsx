@@ -14,7 +14,7 @@ const TodoItem = ({ todo, removeTodo, toggle }) => {
     <ListItem
       secondaryAction={
         <IconButton edge="end" aria-label="comments" onClick={removeTodo}>
-          <DeleteForeverIcon sx={{ color: pink[400] }}  />
+          <DeleteForeverIcon sx={{ color: pink[400] }} />
         </IconButton>
       }
       disablePadding
