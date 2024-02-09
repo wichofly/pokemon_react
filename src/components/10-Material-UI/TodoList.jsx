@@ -24,7 +24,7 @@ export default function TodoList() {
   const removeTodo = (id) =>
     setTodos((prevTodos) => prevTodos.filter((t) => t.id !== id));
 
-  // Select that is done!
+  // Select that it is done!
   const toggleTodo = (id) =>
     setTodos((prevTodos) =>
       prevTodos.map((done) => {
@@ -114,6 +114,9 @@ console.log(initialTodos)
   If the  id  does not match, it simply returns the original todo object.  
 --------------------------------------------------------------------------------------------
 
+  - Destructuring assignment syntax is used to extract the  id  property from the  todo  object. 
+  - This is done to avoid writing  todo.id  multiple times:
+
   <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
       {todos.map((todo) => {
         // Destructuring assignment syntax.
@@ -130,6 +133,22 @@ console.log(initialTodos)
       })}
   </List>
   --------------------------------------------------------------------------------------------
+
+  - Destructuring assignment syntax is used to extract the  id  property from the  todo  object. 
+  - This is done to avoid writing  todo.id  multiple times:
+
+    <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
+      {todos.map(({ id }) => (
+        <TodoItem
+          key={id}
+          todo={todo}
+          removeTodo={() => removeTodo(id)}
+          toggle={() => toggleTodo(id)}
+        />
+      ))}
+    </List>
+
+----------------------------------------------------------------------------------------------------
 
   In case UUID() is not using as npm, is used:
     - id: crypto.randomUUID()
