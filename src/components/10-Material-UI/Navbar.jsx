@@ -8,18 +8,23 @@ import MenuIcon from '@mui/icons-material/Menu';
 export default function Navbar() {
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
+      <AppBar position="static" sx={{ bgcolor: '#F5EEE6' }}>
         <Toolbar>
           <IconButton
             size="large"
             edge="start"
-            color="inherit"
+            color="black"
             aria-label="menu"
             sx={{ mr: 2 }}
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+          <Typography
+            variant="h6"
+            component="div"
+            color="black"
+            sx={{ flexGrow: 1 }}
+          >
             To-Do
           </Typography>
         </Toolbar>

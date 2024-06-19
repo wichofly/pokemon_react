@@ -1,14 +1,28 @@
 import CssBaseline from '@mui/material/CssBaseline';
+import { Box } from '@mui/material';
+import background from '../../Images/background.webp';
+
 import TodoList from './TodoList';
 import Navbar from './Navbar';
 
 const Todo = () => {
   return (
-    <div>
+    <Box
+      sx={{
+        width: '100vw',
+        height: '100vh',
+        backgroundImage: `url(${background})`,
+        backgroundSize: 'contain',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center',
+        backgroundColor: '#EADBC8', // Fills the empty spaces with a similar color
+        color: '#333333', // Dark gray text color
+      }}
+    >
       <CssBaseline />
       <Navbar />
       <TodoList />
-    </div>
+    </Box>
   );
 };
 

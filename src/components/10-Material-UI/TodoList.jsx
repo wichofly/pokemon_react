@@ -42,9 +42,7 @@ export default function TodoList() {
     const capitalizeFirstLetter = (item) =>
       item.charAt(0).toUpperCase() + item.slice(1);
 
-    if (text.trim() === '') {
-      return; // Do not add an item when there is not a string to the to-do list
-    }
+    if (!text.trim()) return; // Do not add an item when there is not a string to the to-do list
 
     return setTodos((prevTodos) => [
       ...prevTodos,
@@ -64,8 +62,9 @@ export default function TodoList() {
     >
       <Typography variant="h2" component="h1" sx={{ flexGrow: 1 }}>
         To-Do List
+        <TodoForm addTodo={addTodo} />
       </Typography>
-      <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
+      <List sx={{ width: '100%', maxWidth: 280, }}>
         {todos.map((todo) => (
           <TodoItem
             key={todo.id}
@@ -74,7 +73,6 @@ export default function TodoList() {
             toggle={() => toggleTodo(todo.id)}
           />
         ))}
-        <TodoForm addTodo={addTodo} />
       </List>
     </Box>
   );
